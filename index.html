@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IAPS Academy, Biswanath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #003366; color: white; padding: 20px; text-align: center; }
+    header img { height: 80px; vertical-align: middle; }
+    .slider-container { width: 100%; max-width: 100%; overflow: hidden; }
+    .slides { width: 100%; }
+    .slider-image { width: 100%; height: auto; display: none; }
+    .slider-image.active { display: block; }
+    table { width: 90%; margin: 20px auto; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    th { background: #003366; color: white; }
+    form { width: 90%; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+    #output { background: #e6f7ff; padding: 20px; margin: 20px auto; width: 90%; border-radius: 8px; display: none; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .chatbot { position: fixed; bottom: 20px; right: 20px; background: white; border: 1px solid #ccc; padding: 10px; width: 250px; border-radius: 10px; }
+    .chatbot input { width: 100%; padding: 5px; }
+  </style>
+</head>
+<body>
+
+
+<!--Heading & Logo-->
+<header>
+  <img src="image/logo.jpg" alt="IAPS Logo">
+  <h1>IAPS Academy, Biswanath</h1>
+</header>
+<br>
+<br>
+
+
+<div class="slider-container">
+  <div class="slides">
+    <img src="image/02.jpg" class="slider-image active">
+    <img src="image/04.jpg" class="slider-image">
+    <img src="image/06.jpg" class="slider-image">
+  </div>
+</div>
+<br>
+<br>
+   <!--Course available-->
+   <h2><center>Courses We Provide</center></h2>
+<table>
+  <tr><th>Course</th><th>Fee (₹)</th></tr>
+  <tr><td>PGDCA</td><td>15,000</td></tr>
+  <tr><td>ADCA</td><td>12,000</td></tr>
+  <tr><td>DCA</td><td>10,000</td></tr>
+  <tr><td>Video and Photo Editing using Canva</td><td>11,000</td></tr>
+  <tr><td>Web Development</td><td>18,000</td></tr>
+  <tr><td>App Development</td><td>19,000</td></tr>
+  <tr><td>Software Development</td><td>20,000</td></tr>
+  <tr><td>Artificial Intelligence and Data Science</td><td>20,000</td></tr>
+</table>
+<br>
+<br>
+<!--Admission Form-->
+<h2><center>Admission Form</center></h2>
+
+<form id="admissionForm" action="form.html">
+
+  <!-- Personal Details -->
+  <label>First Name</label><input type="text"  name="fname" required>
+  <label>Last Name</label><input type="text" name="lname" required>
+  <label>Father’s Name</label><input type="text" name="father" required>
+  <label>Address</label>
+    <textarea name="address" rows="3" cols="30"></textarea><br><br>
+
+  <label>District</label><input type="text" name="district" required>
+  <label>State</label><input type="text" name="state" required>
+  <label>Phone Number</label><input type="number" name="phone number" required>
+   <label>Email</label><input type="email" name="email" required>
+     <label>Occupation</label><input type="text" name="occupation" required>
+     <label>Training Center Name</label><input type="text" name="tcn" required>
+
+<!--Course apply-->
+  <label>Course Applied For</label>
+  <select name="course" required>
+    <option>PGDCA</option><option>ADCA</option><option>DCA</option>
+    <option>Video and Photo Editing using Canva</option>
+    <option>Web Development</option><option>App Development</option>
+    <option>Software Development</option><option>Artificial Intelligence and Data Science</option>
+  </select>
+
+
+   <label>Gender</label>
+  <select name="gender"><option>Male</option>
+    <option>Female</option>
+    <option>Other</option><select>
+
+ <label>Caste</label>
+  <select name="caste"><option>General</option>
+    <option>OBC</option>
+    <option>SC</option>
+    <option>ST</option>
+    <option>Other</option><select>
+
+  <label>Date of Birth</label><input type="text" name="dob">
+
+
+  <label>Religion</label>
+  <select name="religion"><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Buddhist</option><option>Jain</option><option>Other</option></select>
+
+  <!-- Academic Details -->
+  <label>Education Qualification</label>
+  <select name="education"><option>10th Pass</option><option>12th Pass</option><option>Graduate</option><option>Postgraduate</option><option>Diploma</option></select>
+
+  <label>Working Experience</label>
+  <select name="we"><option>None</option><option>1–2 Years</option><option>3–5 Years</option><option>5+ Years</option></select>
+
+  <label>Previous Skill Course Attended</label>
+  <select name="psca"><option>None</option><option>Basic Computer Course</option><option>DCA</option><option>ADCA</option><option>Web Development</option><option>Other</option></select>
+
+  <!-- Other Details -->
+  <label>Aadhaar Card Number</label><input type="number" name="acn">
+  <label>PAN Card Number</label><input type="text" name="pcn">
+  <br>
+  <br>
+
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+
+<div id="output"></div>
+
+<footer>
+  <p>Contact: +91-9876543210 | Email: info@iapsbiswanath.in</p>
+  <p>Address: IAPS Academy, Biswanath, Assam, India</p>
+</footer>
+
+
+<!--Java Script-->
+
+<script>
+  // Image Slider
+  let index = 0;
+  const slides = document.querySelectorAll('.slides img');
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .details-box {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    span {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Details</h2>
+  <div class="details-box">
+    <p>First Name: <span id="fname"></span></p>
+    <p>Last Name: <span id="lname"></span></p>
+    <p>Father's Name: <span id="father"></span></p>
+    <p>Permanent Address: <span id="address"></span></p>
+    <p>District: <span id="district"></span></p>
+    <p>State: <span id="state"></span></p>
+    <p>Phone Number: <span id="phone number"></span></p>
+    <p>Course Applied For: <span id="email"></span></p>
+    <p>Occupation: <span id="occupation"></span></p>
+    <p>Training Center Name: <span id="tcn"></span></p>
+    <p>Gender: <span id="course"></span></p>
+    <p>Email: <span id="gender"></span></p>
+     <p>Caste: <span id="caste"></span></p>
+      <p>Date of Birth: <span id="dob"></span></p>
+       <p>Religion: <span id="religion"></span></p>
+        <p>Education Qualification: <span id="education"></span></p>
+         <p>:Working Experience <span id="we"></span></p>
+          <p>Previous Skill Course Attended: <span id="psca"></span></p>
+           <p>Aadhaar Card Number: <span id="acn"></span></p>
+            <p>PAN Card Number: <span id="pcn"></span></p>
+
+    
+  </div>
+
+  <script>
+    const params = new URLSearchParams (window.location.search);
+    document.getElementById("fname").textContent = params.get("fname");
+    document.getElementById("lname").textContent = params.get("lname");
+    document.getElementById("father").textContent = params.get("father");
+    document.getElementById("address").textContent = params.get("address");
+    document.getElementById("district").textContent = params.get("district");
+    document.getElementById("state").textContent = params.get("state");
+    document.getElementById("phone number").textContent = params.get("phone number");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("occupation").textContent = params.get("occupation");
+    document.getElementById("tcn").textContent = params.get("tcn");
+    document.getElementById("course").textContent = params.get("course");
+    document.getElementById("gender").textContent = params.get("gender");
+     document.getElementById("caste").textContent = params.get("caste");
+      document.getElementById("dob").textContent = params.get("dob");
+       document.getElementById("religion").textContent = params.get("religion");
+        document.getElementById("education").textContent = params.get("education");
+         document.getElementById("we").textContent = params.get("we");
+          document.getElementById("psca").textContent = params.get("psca");
+           document.getElementById("acn").textContent = params.get("acn");
+            document.getElementById("pcn").textContent = params.get("pcn");
+
+
+  </script>
+</body>
+</html>
